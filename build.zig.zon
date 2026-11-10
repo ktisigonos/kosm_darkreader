@@ -1,0 +1,23 @@
+.{
+    .name = .kosm_darkreader,
+    .version = "0.0.0",
+    .fingerprint = 0x42f818ebe97c9998, // Changing this has security and trust implications.
+    .minimum_zig_version = "0.17.0",
+    .dependencies = .{
+        .kosm = .{
+            .url = "git+https://git.nnstdios.com/nnra6864/kosm?ref=master#567cd8c59598fb7de63e5a0ca72cb1e2c298e7a9",
+            .hash = "kosm-0.0.0-YCShsg6XCgA_mLks4gZNgODUTccvTHIYHFn_jI4s4Yae",
+        },
+        .kosm_json = .{
+            .url = "git+https://git.nnstdios.com/nnra6864/kosm_json?ref=master#4ecb3afdb42a1e353a190bd8a1d254a4b47549be",
+            .hash = "kosm_json-0.0.0-F6-IdUB0AACxtEpe1CZL6c6YNSJks3s7i1Qq_gifq__2",
+        },
+    },
+    .paths = .{
+        "build.zig",
+        "build.zig.zon",
+        "root.zig",
+        "App.zig",
+        "README.md",
+    },
+}
