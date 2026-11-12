@@ -43,11 +43,11 @@ pub const Theme = struct {
 };
 
 /// Colors from the theme: each scheme's background and text from black and white, and the
-/// scrollbar and selection from the mode's foreground and background. The font is left alone.
+/// scrollbar and selection from the foreground and background roles. The font is left alone.
 pub fn from(theme: kosm.Theme) App {
     const palette = theme.palette;
-    const foreground = if (theme.mode == .dark) palette.white else palette.black;
-    const background = if (theme.mode == .dark) palette.black else palette.white;
+    const foreground = theme.roles.foreground;
+    const background = theme.roles.background;
     return .{ .theme = .{
         .dark_scheme_background_color = palette.black,
         .dark_scheme_text_color = palette.white,
@@ -160,7 +160,7 @@ const exported =
     \\
 ;
 
-const test_theme = kosm.Theme.from(.{ .black = kosm.hex("041c26"), .white = kosm.hex("a3c5cc") }, .dark);
+const test_theme = kosm.Theme.from(.{ .palette = .{ .black = kosm.hex("041c26"), .white = kosm.hex("a3c5cc") }, .mode = .dark });
 
 test "from sets both schemes' colors in the export and leaves every other setting as exported" {
     var fixture: Fixture = undefined;

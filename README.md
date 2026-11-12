@@ -24,8 +24,8 @@ nothing and needs no export.
 | `theme.dark_scheme_text_color` | null; `from`: white |
 | `theme.light_scheme_background_color` | null; `from`: white |
 | `theme.light_scheme_text_color` | null; `from`: black |
-| `theme.scrollbar_color` | null; `from`: the theme's `lightness.bright` of the foreground (white, black in light mode) |
-| `theme.selection_color` | null; `from`: the theme's `state.selected` of the background |
+| `theme.scrollbar_color` | null; `from`: the theme's `lightness.bright` of the foreground role |
+| `theme.selection_color` | null; `from`: the theme's `state.selected` of the background role |
 | `theme.use_font` | null: whether every page is shown in `theme.font_family` |
 | `theme.font_family` | null |
 | `extra` | `&.{}`: any other setting by its path in the export, e.g. `theme.brightness`; the export must already hold it |
